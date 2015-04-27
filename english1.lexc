@@ -1,9 +1,10 @@
-LEXICON Root
-Noun;
-Verb;
+				!See section 4.2; lexc stands for Lexicon Compiler
+LEXICON Root 	!There are many lexicons here; only 1 can be called Root
+Noun;			!Root is meant to suggest the root of a word
+Verb;			!Lexicon names are not followed by semicolon
 
 LEXICON Noun
-cat   Ninf;
+cat   Ninf;		!Each entry in a lexicon is a FORM and CONTINUATION CLASS
 city  Ninf;
 fox   Ninf;
 panic Ninf;
@@ -11,7 +12,7 @@ try   Ninf;
 watch Ninf;
 
 LEXICON Ninf
-+N+Sg:0 #;
++N+Sg:0 #;		!A CONTINUATION CLASS may be a terminal symbol
 +N+Pl:^s #;
 
 LEXICON Verb
@@ -28,3 +29,5 @@ LEXICON Vinf
 +V+Past:^ed #;
 +V+PastPart:^ed #;
 +V+PresPart:^ing #;
+
+END !optional end statement; anything after it is ignored
