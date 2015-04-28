@@ -3,11 +3,7 @@
 Multichar_Symbols	!Don't include CONTINUATION CLASSES or names of a lexicon
 					+N +Sg +Pl 
 					+V +3P +Past +PastPart +PresPart
-
-
-
-
-				
+			
 LEXICON Root 	!There are many lexicons here; only 1 can be called Root
 		Noun;	!Root is meant to suggest the root of a word
 		Verb;	!Lexicon names are not followed by semicolon
@@ -22,7 +18,7 @@ watch Ninf;
 
 LEXICON Ninf
 +N+Sg:0 #;		!A CONTINUATION CLASS may be a terminal symbol
-+N+Pl:^s #;
++N+Pl:^s #;		!This is a 2-level transducer as shown by the colon
 
 LEXICON Verb
 beg   Vinf;
@@ -39,4 +35,6 @@ LEXICON Vinf
 +V+PastPart:^ed #;
 +V+PresPart:^ing #;
 
-END !optional end statement; anything after it is ignored
+END !optional end statement
+
+anything after it is ignored
