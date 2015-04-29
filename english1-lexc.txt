@@ -13,7 +13,7 @@ LEXICON Root 		!There are many lexicons here; only 1 can be called Root
 LEXICON Noun
 cat   Ninf;			!Each entry in a lexicon is a FORM and CONTINUATION CLASS
 city  Ninf;
-fox   Ninf;
+<f o x>   Ninf;		!Sample regex between angle brackets and exploded
 panic Ninf;
 try   Ninf;
 watch Ninf;
