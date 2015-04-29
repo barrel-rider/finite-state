@@ -1,0 +1,5 @@
+clear
+set char-encoding utf-8
+read lexc < english1-lexc.txt
+write prolog > english1.plg
+write dot > english1.dot
