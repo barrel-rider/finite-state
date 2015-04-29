@@ -1,5 +1,8 @@
+# comments
 clear
 set char-encoding utf-8
 read lexc < english1-lexc.txt
+compose net
+save stack english1.fst
 write prolog > english1.plg
 write dot > english1.dot
