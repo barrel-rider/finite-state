@@ -1,0 +1,12 @@
+cat
+cats
+beg
+begging
+make
+made
+making
+city
+cities
+fox
+foxes 
+

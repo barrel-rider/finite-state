@@ -10,3 +10,23 @@ save stack english1.fst
 write prolog > english1.plg
 write dot > english1.dot
 define Lexicon;
+# delete e before -ing or -ed
+define EDeletion e -> 0 || _ "^" [ i n g | e d ] ;
+# insert e after sibilants before suffix s
+define EInsertion [..] -> e || s | z | x | c h | s h _ "^" s ;
+# replace y with ie before -s and with i before -ed suffixes.
+# BAD LINE define YReplacement y -> i e || _ "^" s ,,
+# insert k if verb ends in c preceded by a vowel
+define KInsertion [..] -> k || V c _ "^" [ e d | i n g ];
+# doubled g before suffixes -ing or -ed
+define ConsonantDoubling g -> g g || _ "^" [ i n g | e d ];
+define Cleanup "^" -> 0;
+# do these need to be ordered? Is there bleeding/feeding?
+define Grammar 	Lexicon .o.
+				EDeletion .o.
+				KInsertion .o.
+				ConsonantDoubling .o.
+				EInsertion .o.
+				Cleanup;
+read regex Grammar;
+save stack english1.fst

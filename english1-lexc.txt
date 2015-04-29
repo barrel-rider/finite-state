@@ -24,7 +24,6 @@ LEXICON Ninf
 
 LEXICON Verb
 beg   Vinf;
-fox   Vinf;
 make  Vinf;
 panic Vinf;
 try   Vinf;
