@@ -1,8 +1,12 @@
 # comments
+# clear stack
 clear
 set char-encoding utf-8
+# compile
 read lexc < english1-lexc.txt
 compose net
+# fst file allows you to use lookup
 save stack english1.fst
 write prolog > english1.plg
 write dot > english1.dot
+define Lexicon;
