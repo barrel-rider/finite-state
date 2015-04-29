@@ -1,0 +1,11 @@
+LEXICON Root 
+dog:собака #;
+cat:кошка #;
+bird:птица #;
+robin:дроздь #;
+insect:несекомое #;
+squirrel:белка #;
+		
+END
+
+

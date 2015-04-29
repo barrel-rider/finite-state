@@ -1,0 +1,42 @@
+					!See section 4.2; lexc stands for Lexicon Compiler
+
+Multichar_Symbols	!Don't include CONTINUATION CLASSES or names of a lexicon
+					+N +Sg +Pl 
+					+V +3P +Past +PastPart +PresPart
+			
+LEXICON Root 		!There are many lexicons here; only 1 can be called Root
+		Noun;		!Root is meant to suggest the root of a word
+		Verb;		!Lexicon names are not followed by semicolon
+					!See page 242 for other categories to possibly include in Root
+					!Root doesn't have to be initial state; see page 241
+
+LEXICON Noun
+cat   Ninf;			!Each entry in a lexicon is a FORM and CONTINUATION CLASS
+city  Ninf;
+fox   Ninf;
+panic Ninf;
+try   Ninf;
+watch Ninf;
+
+LEXICON Ninf
++N+Sg:0 #;			!A CONTINUATION CLASS may be a terminal symbol
++N+Pl:^s #;			!This is a 2-level transducer as shown by the colon
+
+LEXICON Verb
+beg   Vinf;
+fox   Vinf;
+make  Vinf;
+panic Vinf;
+try   Vinf;
+watch Vinf;
+
+LEXICON Vinf
++V:0 #;
++V+3P+Sg:^s #;
++V+Past:^ed #;
++V+PastPart:^ed #;
++V+PresPart:^ing #;
+
+END !optional end statement
+
+anything after it is ignored
